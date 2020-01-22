@@ -1,0 +1,9 @@
+.answer-list {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+
+.answer-btn:hover {
+    background: rgb(218, 108, 5)
+}

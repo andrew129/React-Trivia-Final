@@ -1,0 +1,19 @@
+[
+    {
+        "question": "Minerals can from deep inside earth's crust by...",
+        "answers": ["Cleavage and Fracture", "Friction Along Faults", "Crystallization of Melted Minerals", "Evaporation of Ancient Seas"],
+        "correctAnswer": "Crystallization of Melted Minerals"
+    },
+
+    {
+        "question": "An example of a mineral made up of a pure element is",
+        "answers": ["Copper", "Quartz", "Coal", "Glass"],
+        "correctAnswer": "Copper"
+    },
+
+    {
+        "question": "Halite is a mineral formed by",
+        "answers": ["Crystallization of Hot Water Solutions", "Cooling of Magma", "Evaporation", "Cooling of Lava"],
+        "correctAnswer": "Evaporation"
+    }
+]

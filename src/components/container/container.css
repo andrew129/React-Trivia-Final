@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: rgb(55, 105, 243);
+    border: solid black 3px;
+    width: 33.33%;
+    margin: auto;
+    padding: 15px;
+    height: 400px;
+}

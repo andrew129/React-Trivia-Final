@@ -1,0 +1,14 @@
+.btn {
+    padding: 10px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 20px;
+    background: rgb(255, 60, 0);
+    cursor: pointer;
+    margin-top: 120px;
+}
+
+.btn:hover {
+    transform: translateY(2px);
+    box-shadow: -2px 1px 20px 17px rgb(240, 142, 52);
+}

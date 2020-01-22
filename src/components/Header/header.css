@@ -1,0 +1,45 @@
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    background: repeating-linear-gradient(to right, rgb(55, 105, 243), rgb(21, 21, 221), rgb(233, 126, 25), rgb(187, 19, 7));
+    border-bottom: solid 2px black;
+    padding: 10px;
+    margin-bottom: 168px;
+}
+
+.header-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: auto;
+}
+
+.header-list li:first-child {
+    margin-bottom: 5px;
+    margin-left: 15px;
+}
+
+.header-list li p:first-child {
+    margin-right: 10px;
+}
+
+.header-list li {
+    margin-right: 20px;
+    font-weight: bold;
+}
+
+.github {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.linkedin {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
