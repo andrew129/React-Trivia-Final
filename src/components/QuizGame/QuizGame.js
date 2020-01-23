@@ -75,7 +75,8 @@ class QuizGame extends React.Component {
             count: 0,
             quizEnd: false,
             correctAnswers: 0,
-            incorrectAnswers: 0
+            incorrectAnswers: 0,
+            statement: ''
         })
     }
 
@@ -93,7 +94,7 @@ class QuizGame extends React.Component {
                 }
                 {(this.state.start && !this.state.quizEnd) &&
                     <div class='game-start-container'>
-                        <p>{this.state.statement}</p>
+                        {/* <p>{this.state.statement}</p> */}
                         <p style={{fontWeight: 'bold', marginBottom: 18, fontSize: 20}}>{this.state.questions[this.state.count].question}</p>
                         <Timer 
                             changeQuestion={this.changeQuestion}

@@ -6,10 +6,11 @@
 
 .answer-list button {
     background-color: rgb(216, 116, 22);
+    outline: none;
 }
 
 .answer-list button:hover {
-    background-color: rgb(218, 108, 5);
+    background-color: rgb(247, 99, 14);
     transform: translateY(2px);
 }
 
