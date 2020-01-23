@@ -5,12 +5,11 @@ const styles = {
     borderRadius: 20,
     padding: 15,
     cursor: 'pointer',
-    backgroundColor: 'rgb(233, 126, 25)',
     fontSize: 16,
     marginBottom: 10,
     '&:hover': {
-        background: 'red'
-    },
+        background: 'blue',
+    }
 }
 
 const AnswerContainer = props => {

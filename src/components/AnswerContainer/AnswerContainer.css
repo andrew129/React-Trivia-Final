@@ -4,6 +4,12 @@
     margin-top: 20px;
 }
 
-.answer-btn:hover {
-    background: rgb(218, 108, 5)
+.answer-list button {
+    background-color: rgb(233, 126, 25);
 }
+
+.answer-list button:hover {
+    background-color: rgb(218, 108, 5);
+    transform: translateY(2px);
+}
+
