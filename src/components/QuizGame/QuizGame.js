@@ -55,12 +55,22 @@ class QuizGame extends React.Component {
                 quizEnd: true
             })
         }
+        console.log(this.state.count)
     }
 
-    changeQuestion = () => {
+    changeQuestion = seconds => {
+        console.log(this.state.count)
+        console.log(seconds)
         this.setState({
-            count: this.state.count + 1
+            count: this.state.count + 1,
         })
+
+        if (seconds === 10) {
+            this.setState({
+                incorrectAnswers: this.state.incorrectAnswers + 1
+            })
+        }
+        
         if (this.state.count === this.state.questions.length) {
             this.setState({
                 start: false,

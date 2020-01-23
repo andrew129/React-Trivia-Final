@@ -23,7 +23,7 @@ class Timer extends React.Component {
             this.setState({
                 seconds: 10
             })
-            this.props.changeQuestion()
+            this.props.changeQuestion(this.state.seconds)
             this.run()
         }
     }

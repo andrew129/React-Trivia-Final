@@ -3,14 +3,14 @@ import './header.css';
 
 const Header = () => {
     return (
-        <div class='header'>
-            <h1 class='header-title'>Mineral Trivia Game</h1>
-            <ul class='header-list'>
-                <li class='github'>
+        <div className='header'>
+            <h1 className='header-title'>Mineral Trivia Game</h1>
+            <ul className='header-list'>
+                <li className='github'>
                     <p>Andrew Stiles: </p>
                     <p>Github</p>
                 </li>
-                <li class='linkedin'>
+                <li className='linkedin'>
                     <p>Tim Stiles: </p>
                     <p>LinkedIn</p>
                 </li>
