@@ -124,8 +124,8 @@ class QuizGame extends React.Component {
                 {(this.state.quizEnd && !this.state.start) &&
                     <div class='game-end-container'>
                         <h2>Results</h2>
-                        <p>Correct Answers: {this.state.correctAnswers}</p>
-                        <p>Incorrect Answers: {this.state.incorrectAnswers}</p>
+                        <p style={{fontWeight: 'bold'}}>Correct Answers: {this.state.correctAnswers}</p>
+                        <p style={{fontWeight: 'bold'}}>Incorrect Answers: {this.state.incorrectAnswers}</p>
                         <button onClick={this.handleClickReset} class='reset-btn'>Try Again?</button>
                     </div> 
                 }
