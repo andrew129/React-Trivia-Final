@@ -15,7 +15,8 @@ class QuizGame extends React.Component {
         quizEnd: false,
         correctAnswers: 0,
         incorrectAnswers: 0,
-        statement: ''
+        statement: '',
+        color: ''
     }
 
     handleStartClick = () => {
@@ -33,20 +34,19 @@ class QuizGame extends React.Component {
     }
 
     handleClickedAnswer = answer => {
-        console.log(answer)
         const correctAnswersArray = this.correctAnswers()
-        console.log(correctAnswersArray)
-        this.setState({count: this.state.count + 1})
         if (correctAnswersArray.includes(answer)) {
             this.setState({
                 correctAnswers: this.state.correctAnswers + 1,
-                statement: 'Correct!!'
+                statement: 'Correct!!',
+                color: 'green'
             })
         }
         if (!correctAnswersArray.includes(answer)) {
             this.setState({
                 incorrectAnswers: this.state.incorrectAnswers + 1,
-                statement: 'Wrong!!'
+                statement: 'Wrong!!',
+                color: 'red'
             })
         }
         if (this.state.count === this.state.questions.length - 1) {
@@ -55,19 +55,24 @@ class QuizGame extends React.Component {
                 quizEnd: true
             })
         }
-        console.log(this.state.count)
+        setTimeout(() => {
+            this.setState({count: this.state.count + 1, statement: ''})
+        }, 1000)
     }
 
     changeQuestion = seconds => {
-        console.log(this.state.count)
-        console.log(seconds)
-        this.setState({
-            count: this.state.count + 1,
-        })
+
+        setTimeout(() => {
+            this.setState({
+                count: this.state.count + 1,
+            })
+        }, 1000)
 
         if (seconds === 10) {
             this.setState({
-                incorrectAnswers: this.state.incorrectAnswers + 1
+                incorrectAnswers: this.state.incorrectAnswers + 1,
+                statement: "Time's Up",
+                color: 'red'
             })
         }
         
@@ -95,7 +100,7 @@ class QuizGame extends React.Component {
             <div class='game-section'>
                 {(!this.state.start && !this.state.quizEnd) &&
                     <div class='game-initial-container'>
-                        <p style={{fontSize: 18, marginLeft: 20}}><strong>Test Your knowledge of Rocks and Minerals with this quiz, you will have ten seconds to answer each question.</strong></p>
+                        <p style={{fontSize: 25, marginLeft: 20}}><strong>Test Your knowledge of Rocks and Minerals with this quiz, you will have ten seconds to answer each question.</strong></p>
                         <Button
                             message={this.state.message}
                             onClick={this.handleStartClick}
@@ -104,13 +109,14 @@ class QuizGame extends React.Component {
                 }
                 {(this.state.start && !this.state.quizEnd) &&
                     <div class='game-start-container'>
-                        {/* <p>{this.state.statement}</p> */}
+                        <p style={{marginBottom: 10, fontSize: 25, color: `${this.state.color}`, fontWeight: 'bold'}}>{this.state.statement}</p>
                         <p style={{fontWeight: 'bold', marginBottom: 18, fontSize: 20}}>{this.state.questions[this.state.count].question}</p>
                         <Timer 
                             changeQuestion={this.changeQuestion}
                         />
                         <AnswerContainer
                             answers={this.state.questions[this.state.count].answers}
+                            color={this.state.color}
                             onClick={this.handleClickedAnswer}
                         />
                     </div>

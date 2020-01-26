@@ -20,9 +20,12 @@ class Timer extends React.Component {
         this.setState({seconds: this.state.seconds - 1})
         if (this.state.seconds === 0) {
             this.stop()
-            this.setState({
-                seconds: 10
-            })
+            setTimeout(() => {
+                this.setState({
+                    seconds: 10
+                })
+            }, 1000)
+        
             this.props.changeQuestion(this.state.seconds)
             this.run()
         }

@@ -15,5 +15,48 @@
         "question": "Halite is a mineral formed by",
         "answers": ["Crystallization of Hot Water Solutions", "Cooling of Magma", "Evaporation", "Cooling of Lava"],
         "correctAnswer": "Evaporation"
+    },
+
+    {
+        "question": "Limestone is formed from:",
+        "answers": ["crushed shells or coral", "pebbles of various sizes", "sand", "water particles"],
+        "correctAnswer": "crushed shells or coral"
+    },
+
+    {
+        "question": "Rocks that were originally either sedimentary, igneous or metamorphic and have been changed further by heat and pressure are called:",
+        "answers": ["volcanic", "sedimented", "metamorphic", "igneous"],
+        "correctAnswer": "metamorphic"
+    },
+
+    {
+        "question": "Cementation of sedimentary rocks is the result of the chemical named:",
+        "answers": ["hydrochloric acid", "calcium carbonate", "sodium chloride", "carbon dihydrate"],
+        "correctAnswer": "calcium carbonate"
+    },
+
+    {
+        "question": "The process of breaking down of rocks into smaller particles is called:",
+        "answers": ["weathering", "erosion", "sedimentation", "grinding"],
+        "correctAnswer": "weathering"
+    },
+
+    {
+        "question": "minerals are...",
+        "answers": ["made up of minerals", "have 3 types: metamorphic, igneous, and sedimentary", "made up of chemicals", "made up of molecules"],
+        "correctAnswer": "made up of chemicals"
+    },
+
+    {
+        "question": "metamorphic rocks are formed by",
+        "answers": ["cooling and hardening", "heat and pressure", "breaking down of mountains", "none of the above"],
+        "correctAnswer": "Evaporation"
+    },
+
+    {
+        "question": "Flourite is a colorful mineral, what is the most valuable color",
+        "answers": ["pink", "blue", "yellow", "red"],
+        "correctAnswer": "pink"
     }
+    
 ]
