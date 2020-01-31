@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/andrew129/React-Trivia/static/css/main.ffc0a9db.chunk.css",
+    "main.js": "/andrew129/React-Trivia/static/js/main.9a098c32.chunk.js",
+    "main.js.map": "/andrew129/React-Trivia/static/js/main.9a098c32.chunk.js.map",
+    "runtime-main.js": "/andrew129/React-Trivia/static/js/runtime-main.f4d22423.js",
+    "runtime-main.js.map": "/andrew129/React-Trivia/static/js/runtime-main.f4d22423.js.map",
+    "static/js/2.9075058e.chunk.js": "/andrew129/React-Trivia/static/js/2.9075058e.chunk.js",
+    "static/js/2.9075058e.chunk.js.map": "/andrew129/React-Trivia/static/js/2.9075058e.chunk.js.map",
+    "index.html": "/andrew129/React-Trivia/index.html",
+    "precache-manifest.0d0fc5d30bb3128e9cdc2a1c94d95b2c.js": "/andrew129/React-Trivia/precache-manifest.0d0fc5d30bb3128e9cdc2a1c94d95b2c.js",
+    "service-worker.js": "/andrew129/React-Trivia/service-worker.js",
+    "static/css/main.ffc0a9db.chunk.css.map": "/andrew129/React-Trivia/static/css/main.ffc0a9db.chunk.css.map",
+    "static/js/2.9075058e.chunk.js.LICENSE": "/andrew129/React-Trivia/static/js/2.9075058e.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f4d22423.js",
+    "static/js/2.9075058e.chunk.js",
+    "static/css/main.ffc0a9db.chunk.css",
+    "static/js/main.9a098c32.chunk.js"
+  ]
+}
