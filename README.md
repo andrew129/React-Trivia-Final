@@ -1,6 +1,6 @@
 ## About
 
-A trivia game with a mineral theme.  Directions will be on the page
+A trivia game with a mineral theme. There are ten questions, try to get as many right as possible.
 
 ## Technologies
 
