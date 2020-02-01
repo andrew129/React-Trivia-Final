@@ -13,6 +13,10 @@ A trivia game with a mineral theme. There are ten questions, try to get as many 
 - CSS
 - HTML
 
+## Link
+
+Try it out here https://evening-springs-86076.herokuapp.com/
+
 
 
 
