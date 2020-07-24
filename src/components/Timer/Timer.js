@@ -12,27 +12,29 @@ class Timer extends React.Component {
     }
 
     run = () => {
-        clearInterval(intervalId)
+        this.setState({ seconds: 10 })
         intervalId = setInterval(this.decrement, 1000)
     }
 
     decrement = () => {
         this.setState({seconds: this.state.seconds - 1})
         if (this.state.seconds === 0) {
-            this.stop()
+            clearInterval(intervalId)
+            this.props.changeQuestion("Time's Up")
             setTimeout(() => {
-                this.setState({
-                    seconds: 10
-                })
+                this.run()
             }, 1000)
-        
-            this.props.changeQuestion(this.state.seconds)
-            this.run()
         }
-    }
-
-    stop = () => {
-        clearInterval(intervalId);
+        if (this.props.intervalStatus === 'done') {
+            clearInterval(intervalId)
+        }
+        else if (this.props.intervalStatus === 'next') {
+            console.log('next')
+            clearInterval(intervalId)
+            setTimeout(() => {
+                this.run() 
+            }, 700)
+        }
     }
 
     render() {

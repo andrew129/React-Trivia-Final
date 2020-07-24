@@ -16,7 +16,8 @@ class QuizGame extends React.Component {
         correctAnswers: 0,
         incorrectAnswers: 0,
         statement: '',
-        color: ''
+        color: '',
+        intervalStatus: ''
     }
 
     handleStartClick = () => {
@@ -41,46 +42,42 @@ class QuizGame extends React.Component {
                 statement: 'Correct!!',
                 color: 'green'
             })
+
+            this.checkForEndOfQuiz(this.state.count)
         }
-        if (!correctAnswersArray.includes(answer)) {
-            this.setState({
-                incorrectAnswers: this.state.incorrectAnswers + 1,
-                statement: 'Wrong!!',
-                color: 'red'
-            })
+        else {
+            this.changeQuestion('Wrong!!')
         }
-        if (this.state.count === this.state.questions.length - 1) {
-            this.setState({
-                start: false,
-                quizEnd: true
-            })
-        }
-        setTimeout(() => {
-            this.setState({count: this.state.count + 1, statement: ''})
-        }, 1000)
     }
 
-    changeQuestion = seconds => {
+    changeQuestion = statement => {
 
-        setTimeout(() => {
-            this.setState({
-                count: this.state.count + 1,
-            })
-        }, 1000)
+        this.setState({
+            incorrectAnswers: this.state.incorrectAnswers + 1,
+            statement: statement,
+            color: 'red'
+        })
 
-        if (seconds === 10) {
-            this.setState({
-                incorrectAnswers: this.state.incorrectAnswers + 1,
-                statement: "Time's Up",
-                color: 'red'
-            })
-        }
-        
-        if (this.state.count === this.state.questions.length) {
+        this.checkForEndOfQuiz(this.state.count)
+    }
+
+    checkForEndOfQuiz = count => {
+        if (count === this.state.questions.length - 1) {
             this.setState({
                 start: false,
-                quizEnd: true
+                quizEnd: true,
+                intervalStatus: 'done'
             })
+        }
+        else {
+            this.setState({intervalStatus: 'next'})
+            setTimeout(() => {
+                this.setState({
+                    count: this.state.count + 1,
+                    statement: '',
+                    intervalStatus: ''
+                })
+            }, 1000)
         }
     }
 
@@ -113,6 +110,7 @@ class QuizGame extends React.Component {
                         <p style={{fontWeight: 'bold', marginBottom: 18, fontSize: 20}}>{this.state.questions[this.state.count].question}</p>
                         <Timer 
                             changeQuestion={this.changeQuestion}
+                            intervalStatus={this.state.intervalStatus}
                         />
                         <AnswerContainer
                             answers={this.state.questions[this.state.count].answers}
